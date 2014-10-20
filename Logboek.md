@@ -105,6 +105,8 @@ Als laatste stap je ontwerp schalen met media queries waar je de waarde van 1rem
   }
 }
 ```
+[Resultaat](demos/rems/rems.html)
+
 ######  Sources:  ######
 - http://css-tricks.com/confused-rem-em/
 - http://www.awwwards.com/responsive-typography-a-roundup-of-the-best-articles-and-tutorials.html
