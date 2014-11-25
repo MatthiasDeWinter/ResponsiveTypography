@@ -107,9 +107,18 @@ Als laatste stap je ontwerp schalen met media queries waar je de waarde van 1rem
 ```
 [Resultaat](demos/rems/rems.css)
 
+### Modular Scale ###
+Modular Scale is een open-source typography tool voor Sass.
+Het maakt gebruik van de gulden ratio om de scaling van je copy te doen.
+Je kan deze increments natuurlijk ook kleiner of groter maken afhankelijk van wat je nodig hebt.
+
+Zeer gemakkelijk in gebruik!
+### Flowtype.js ###
+Javascript plugin met jQuery dependency.
+### Sass ###
+Vanaf Sass 3.3 kan je gebruik maken van de responsive mixin van Sass.
+
 ##  ToDo:  ##
-- FlowType.js
-- Responsive Typography using Sass
 - Responsive Logo's
 - Sass Baseline
 
