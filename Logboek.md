@@ -111,6 +111,7 @@ Als laatste stap je ontwerp schalen met media queries waar je de waarde van 1rem
 - FlowType.js
 - Responsive Typography using Sass
 - Responsive Logo's
+- Sass Baseline
 
 ######  Sources:  ######
 - http://css-tricks.com/confused-rem-em/
