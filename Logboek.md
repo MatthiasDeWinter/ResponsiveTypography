@@ -115,6 +115,31 @@ Je kan deze increments natuurlijk ook kleiner of groter maken afhankelijk van wa
 Zeer gemakkelijk in gebruik!
 ### Flowtype.js ###
 Javascript plugin met jQuery dependency.
+FlowType zorgt ervoor dat er altijd 45-75 karakters per lijn zijn op je pagina, dit is algemeen aangenomen de meest leesbare standaard. Dit is moeilijk te bereiken met enkel CSS media-queries.
+Met FlowType los je dit op een gemakkelijke en elegante manier op.
+
+Je hebt enkel een typography base nodig.
+
+```css
+body {
+ font-size: 18px;
+}
+h1,h2,h3,h4,h5,h6,p {
+ line-height: 1.45;
+}
+h1 { font-size: 4em; }
+h2 { font-size: 3em; }
+h3 { etc... }
+```
+
+Hierna moet je enkel flowType aanroepen in je Javascript bestand.
+
+```js
+$('body').flowtype();
+```
+Hierin kan je alle beschikbare parameters van flowType veranderen.
+(minimum, maximum, minFont, maxFont, fontRatio)
+
 ### Sass ###
 Vanaf Sass 3.3 kan je gebruik maken van de responsive mixin van Sass.
 
