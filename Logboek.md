@@ -107,11 +107,6 @@ Als laatste stap je ontwerp schalen met media queries waar je de waarde van 1rem
 ```
 [Resultaat](demos/rems/rems.css)
 
-### Modular Scale ###
-Modular Scale is een open-source typography tool voor Sass.
-Het maakt gebruik van de gulden ratio om de scaling van je copy te doen.
-Je kan deze increments natuurlijk ook kleiner of groter maken afhankelijk van wat je nodig hebt.
-
 Zeer gemakkelijk in gebruik!
 ### Flowtype.js ###
 Javascript plugin met jQuery dependency.
@@ -142,6 +137,42 @@ Hierin kan je alle beschikbare parameters van flowType veranderen.
 
 ### Sass ###
 Vanaf Sass 3.3 kan je gebruik maken van de responsive mixin van Sass.
+
+### Modular Scale ###
+Modular Scale is een open-source typography tool voor Sass.
+Het maakt gebruik van de gulden ratio om de scaling van je copy te doen.
+Je kan deze increments natuurlijk ook kleiner of groter maken afhankelijk van wat je nodig hebt.
+
+Als alle font-sizes geset zijn met REM's kan het moeilijk zijn om het aantal REM's te bepalen voor andere elementen. 
+Hoeveel REM's moet een H1 of H2 zijn?
+De meeste mensen doen dit op gevoel en stellen deze groottes af met het oog.
+Sommige proporties zijn aangenamer voor het oog en komen veel voor in onder andere natuur, muziek en architectuur.
+
+> [...] these proportions not only seem to please human beings in many different centuries and countries, they are also 
+> prominent in nature far beyond the human realm.
+> Robert Bringhurst — The Elements of Typographic Style
+
+Modular Scale gebruikt de Modulor schaal van Le Corbusier, deze is gebaseerd op de gulden ratio en proporties van het menselijk lichaam.
+
+Modular Scale is heel gemakkelijk in gebruik, het voorziet een aantal klassieke ratios om te gebruiken.
+Je moet eerst een baseline instellen en vervolgens en ratio.
+
+```css
+$ms-base: 1rem;      //Baseline van 1 rem
+$ms-ratio: $golden;  // Gulden ratio van 1,618
+```
+
+Als dit gebeurd is, is het heel gemakkelijk om andere waardes van deze schaal aan te roepen met de ms() functie.
+Op deze manier kan je die waardes aan alle verschillende elementen koppelen.
+
+```css
+body { font-size: ms(0); }   // 1rem - $ms-base
+h5 { font-size: ms(1); }     // 1,68 rem
+h4 { font-size: ms(2); }
+h3 { font-size: ms(3); }
+h2 { font-size: ms(4); }
+h1 { font-size: ms(5); }
+```
 
 ##  ToDo:  ##
 - Responsive Logo's
