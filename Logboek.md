@@ -268,3 +268,6 @@ Meer voorbeelden zijn te vinden op [responsive logos](http://responsivelogos.co.
 - https://bugsnag.com/blog/responsive-typography-with-rems
 - http://responsivelogos.co.uk/
 - https://gist.github.com/maxluster/168e650267bac9faaafd
+- http://www.fastcodesign.com/3033446/what-corporate-logos-would-look-like-if-you-shrank-them
+- https://github.com/at-import/modular-scale
+- http://simplefocus.com/flowtype
