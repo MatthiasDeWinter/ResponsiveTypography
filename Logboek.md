@@ -271,3 +271,4 @@ Meer voorbeelden zijn te vinden op [responsive logos](http://responsivelogos.co.
 - http://www.fastcodesign.com/3033446/what-corporate-logos-would-look-like-if-you-shrank-them
 - https://github.com/at-import/modular-scale
 - http://simplefocus.com/flowtype
+- http://www.smashingmagazine.com/2009/06/02/fixed-vs-fluid-vs-elastic-layout-whats-the-right-one-for-you/
