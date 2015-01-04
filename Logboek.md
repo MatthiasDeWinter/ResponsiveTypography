@@ -174,8 +174,18 @@ h2 { font-size: ms(4); }
 h1 { font-size: ms(5); }
 ```
 
+### Responsive Logos ###
+Responsive logos vallen niet helemaal binnen 'responsive typography' maar goed gebruik ervan kan zeker en vast bijdragen aan een betere responsive layout en de leesbaarheid van zowel het logo als de hele pagina te verbeteren.
+Wanneer we aan responsive denken bij afbeelding denken de meesten enkel aan het schalen van de afbeelding en niet zozeer aan de mogelijkheid om de afbeelding zelf te veranderen.
+
+Het idee is om logos afhankelijk van hoe klein de viewport is te versimpelen.
+Bijvoorbeeld het complexe Walt Disney logo zal op een klein scherm enkel de cursieve hoofdletter D behouden.
+Dit zorgt ervoor dat het logo er niet te rommelig zal uitzien of niet meer 'werkt' in het geheel van de pagina.
+Wat er ook gebeurt met te complexe logos op kleine schermen is dat de details niet meer goed zichtbaar zijn en het logo er gewoon raar uitziet.
+
+Meer voorbeelden zijn te vinden op [responsive logos](http://responsivelogos.co.uk/) door Joe Harrison.
+
 ##  ToDo:  ##
-- Responsive Logo's
 - Sass Baseline
 
 ######  Sources:  ######
@@ -185,3 +195,4 @@ h1 { font-size: ms(5); }
 - http://www.webdesignerdepot.com/2012/10/a-simple-guide-to-responsive-typography/
 - http://ia.net/blog/responsive-typography-the-basics/
 - https://bugsnag.com/blog/responsive-typography-with-rems
+- http://responsivelogos.co.uk/
