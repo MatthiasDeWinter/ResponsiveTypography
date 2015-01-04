@@ -135,9 +135,6 @@ $('body').flowtype();
 Hierin kan je alle beschikbare parameters van flowType veranderen.
 (minimum, maximum, minFont, maxFont, fontRatio)
 
-### Sass ###
-Vanaf Sass 3.3 kan je gebruik maken van de responsive mixin van Sass.
-
 ### Modular Scale ###
 Modular Scale is een open-source typography tool voor Sass.
 Het maakt gebruik van de gulden ratio om de scaling van je copy te doen.
@@ -174,6 +171,83 @@ h2 { font-size: ms(4); }
 h1 { font-size: ms(5); }
 ```
 
+### Sass ###
+Nu je een goede typografische fundering hebt gebouwd met Modular Scale, FlowType, of de manuele manier met EM's of REM's moet je deze nog responsive maken.
+Door deze fundering is het zo gemakkelijk als de font-size property van het html element te veranderen, maar met enkel CSS kom je snel aan veel media queries voor alle screen sizes. In het voorbeeld met REM gebruik ik 9 media queries.
+
+De responsive mixin van Sass laat je toe om dit met veel minder code en op een veel leesbaardere manier aan te pakken.
+
+```css
+html{
+  @include responsive("font-size", 11px,
+    (
+       500px: 14px,
+       570px: 15px,
+      620px: 16px,
+      680px: 17px,
+      720px: 18px,
+      800px: 19px,
+      860px: 20px,
+      920px: 21px,
+      1000px: 22px
+    )
+  );
+}
+```
+Op deze manier kan je zelf ook veel sneller lezen hoeveel 1rem bedraagt bij welke screen size.
+
+Met deze mixin heb je ook gemakkelijker controle over welke screen sizes je wilt manipuleren.
+Stel dat je de font-size wil aanpassen voor iPads in landscape mode.
+
+```css
+@include responsive("font-size", 11px,
+  (
+    (min-device-width 768px) 
+    (max-device-width 1024px) 
+    (orientation landscape) : 16px
+  )
+);
+```
+
+In css wordt dit:
+```css
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) { font-size: 16px; }
+```
+
+Je kan in SASS ook gebruik maken van named-breakpoints waardoor het gemakkelijker is om deze te hergebruiken.
+Sla je breakpoints (met naam) op in een globale variabele genaamd $named-breakpoints.
+
+```css
+$named-breakpoints: (
+    "xs": 350px,
+     "s": 600px,
+     "m": 800px,
+     "l": 1420px,
+    "xl": 2100px,
+  "ipad_landscape": (min-device-width 768px) (max-device-width 1024px) (orientation: landscape)
+); 
+```
+
+Hierna kan je deze named-breakpoints aanroepen in je responsive mixins zoals je bij normale breakpoints zou doen.
+
+```css
+@include responsive("font-size", 11px,
+  (   
+    "xs" : 12px,
+    "s" : 13px,
+    "m" : 14px,
+    "l" : 15px,
+    "xl" : 16px,
+    "ipad_landscape" : 16px
+  )
+);
+```
+
+Nu heb je een goede, leesbare en compacte responsieve typografische basis waarop je je website verder kan uitbouwen!
+
 ### Responsive Logos ###
 Responsive logos vallen niet helemaal binnen 'responsive typography' maar goed gebruik ervan kan zeker en vast bijdragen aan een betere responsive layout en de leesbaarheid van zowel het logo als de hele pagina te verbeteren.
 Wanneer we aan responsive denken bij afbeelding denken de meesten enkel aan het schalen van de afbeelding en niet zozeer aan de mogelijkheid om de afbeelding zelf te veranderen.
@@ -185,9 +259,6 @@ Wat er ook gebeurt met te complexe logos op kleine schermen is dat de details ni
 
 Meer voorbeelden zijn te vinden op [responsive logos](http://responsivelogos.co.uk/) door Joe Harrison.
 
-##  ToDo:  ##
-- Sass Baseline
-
 ######  Sources:  ######
 - http://css-tricks.com/confused-rem-em/
 - http://www.awwwards.com/responsive-typography-a-roundup-of-the-best-articles-and-tutorials.html
@@ -196,3 +267,4 @@ Meer voorbeelden zijn te vinden op [responsive logos](http://responsivelogos.co.
 - http://ia.net/blog/responsive-typography-the-basics/
 - https://bugsnag.com/blog/responsive-typography-with-rems
 - http://responsivelogos.co.uk/
+- https://gist.github.com/maxluster/168e650267bac9faaafd
