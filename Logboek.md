@@ -200,13 +200,15 @@ Met deze mixin heb je ook gemakkelijker controle over welke screen sizes je wilt
 Stel dat je de font-size wil aanpassen voor iPads in landscape mode.
 
 ```css
-@include responsive("font-size", 11px,
-  (
-    (min-device-width 768px) 
-    (max-device-width 1024px) 
-    (orientation landscape) : 16px
-  )
-);
+html {
+    @include responsive("font-size", 11px,
+    (
+        (min-device-width 768px) 
+        (max-device-width 1024px) 
+        (orientation landscape) : 16px
+    )
+    );
+}
 ```
 
 In css wordt dit:
