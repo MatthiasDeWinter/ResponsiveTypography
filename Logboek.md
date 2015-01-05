@@ -236,16 +236,18 @@ $named-breakpoints: (
 Hierna kan je deze named-breakpoints aanroepen in je responsive mixins zoals je bij normale breakpoints zou doen.
 
 ```css
-@include responsive("font-size", 11px,
-  (   
-    "xs" : 12px,
-    "s" : 13px,
-    "m" : 14px,
-    "l" : 15px,
-    "xl" : 16px,
-    "ipad_landscape" : 16px
-  )
-);
+html {
+    @include responsive("font-size", 11px,
+    (   
+        "xs" : 12px,
+        "s" : 13px,
+        "m" : 14px,
+        "l" : 15px,
+        "xl" : 16px,
+        "ipad_landscape" : 16px
+    )
+    );
+}
 ```
 
 Nu heb je een goede, leesbare en compacte responsieve typografische basis waarop je je website verder kan uitbouwen!
